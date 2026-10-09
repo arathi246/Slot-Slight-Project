@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slot Sight</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="#home" class="logo">Slot Sight</a>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#demo">Demo</a>
+            <a href="#book">Book</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <p class="badge">AI-powered parking</p>
+    <h1>Know before you park.</h1>
+        <p class="hero-text">
+      Slot Sight predicts which parking lots will have free spots,
+      so drivers skip the circling and businesses keep their customers happy.
+    </p>
+    <div class="hero-buttons">
+      <a href="#demo" class="btn btn-primary">Try the demo</a>
+    </div>
+  </section>
+  <section class="demo" id="demo">
+    <h2>Try the predictor</h2>
+    <p class="demo-text">
+      Pick a time, the weather and an event, then see which lot is likely to have space.
+    </p>
+
+    <div class="demo-card">
+      <label for="time">Time of day</label>
+      <select id="time">
+        <option value="morning">Morning (8 to 10 AM)</option>
+        <option value="midday">Midday (11 AM to 2 PM)</option>
+        <option value="afternoon">Afternoon (3 to 5 PM)</option>
+        <option value="evening">Evening (6 to 9 PM)</option>
+      </select>
+
+      <label for="weather">Weather</label>
+      <select id="weather">
+        <option value="sunny">Sunny</option>
+        <option value="rainy">Rainy</option>
+      </select>
+
+      <label for="event">Special event</label>
+                  <select id="event">
+        <option value="none">No event</option>
+        <option value="rush">Weekday rush hour</option>
+        <option value="sale">Shopping sale day</option>
+        <option value="match">Match day</option>
+        <option value="concert">Concert night</option>
+        <option value="festival">Festival weekend</option>
+        <option value="holiday">Public holiday</option>
+        <option value="conference">Business conference</option>
+      </select>
+      <button type="button" id="predict-btn" class="btn btn-primary">Predict parking</button>
+    </div>
+
+    <div id="result" class="result"></div>
+  </section>  <section class="book" id="book">
+    <h2>Pre-book a slot</h2>
+    <p class="book-text">
+      Reserve a space ahead of time, so it is waiting when you arrive.
+    </p>
+
+    <div class="book-card">
+      <label for="book-lot">Parking lot</label>
+      <select id="book-lot">
+        <option value="Lot A - Main Entrance">Lot A - Main Entrance</option>
+        <option value="Lot B - Basement">Lot B - Basement</option>
+        <option value="Lot C - Rooftop">Lot C - Rooftop</option>
+      </select>
+
+      <label for="book-date">Date</label>
+      <input type="date" id="book-date">
+
+      <label for="book-time">Arrival time</label>
+      <input type="time" id="book-time">
+
+      <label for="book-duration">How long will you stay?</label>
+      <select id="book-duration">
+        <option value="1 hour">1 hour</option>
+        <option value="2 hours">2 hours</option>
+        <option value="3 hours">3 hours</option>
+        <option value="Half day">Half day</option>
+        <option value="Full day">Full day</option>
+      </select>
+
+      <label for="book-vehicle">Vehicle number</label>
+      <input type="text" id="book-vehicle" placeholder="Example: AB 12 CD 3456">
+
+      <button type="button" id="book-btn" class="btn btn-primary">Reserve my slot</button>
+    </div>
+
+    <div id="book-result" class="book-result"></div>
+  </section>  <footer class="footer">
+    <p class="footer-logo">Slot Sight</p>
+    <p class="footer-tagline">Know before you park.</p>
+    <p class="footer-small">Demo prototype. Built with HTML, CSS and JavaScript.</p>
+  </footer>
+</body>
+  <script src="script.js"></script>
+</html>
